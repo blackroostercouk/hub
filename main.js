@@ -426,6 +426,7 @@ const circle34 = new mojs.Shape({
   fill:         '#fdc211',
   radiusX:       10,
   radiusY:       {200 : 10}, easing: 'quint.out',
+  isShowStart:  true,	
   duration:1000,
   
 }).then({
