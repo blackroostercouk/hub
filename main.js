@@ -421,7 +421,7 @@ $(".workcollection").find(".collectioncontainer").eq(1).addClass("ters");
 $( ".collectioncontainer" ).each(function( index ) {
      $(this).addClass('cl'+index+'');
      $(this).find(".cub2").find(".cub").attr('id','gb'+index+'');
-     $(this).find(".collectionleft").find(".cub2").find(".cub").find("img").attr('id','im'+index+'');
+     $(this).find(".cub2").find(".cub").find("img").attr('id','im'+index+'');
      
 });
 
