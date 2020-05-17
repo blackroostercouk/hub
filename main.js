@@ -418,7 +418,126 @@ $(".workcollection").find(".collectioncontainer").eq(1).addClass("ters");
     
 	  });
 
+$( ".collectioncontainer" ).each(function( index ) {
+     $(this).addClass('cl'+index+'');
+     $(this).find(".collectionleft").find(".cub2").find(".cub").attr('id','gb'+index+'');
+     $(this).find(".collectionleft").find(".cub2").find(".cub").find("img").attr('id','im'+index+'');
+     
+});
 
+
+
+
+var tl = anime.timeline({
+   easing: 'easeInOutQuad',
+   duration: 750,
+   autoplay: false,
+});
+
+var tl2 = anime.timeline({
+   easing: 'easeInOutQuad',
+   duration: 750,
+   autoplay: false,
+});
+
+
+
+
+tl.add({
+  targets: '#gb0',
+  scaleX: 1,
+  scaleY: 1,
+  duration:230,
+  easing: 'easeInOutQuad',
+  height: ['350', '20'],
+  borderWidth: '0px',
+  
+ }).add({
+  targets: '#gb0',
+  left:'25%',
+  borderRadius:['0%', '50%'],
+  easing: 'easeInOutQuad',
+  delay: 0,
+  scale: 3,
+  top: ['50%', '70%'],
+  borderWidth: ['0px' ,'2px'],
+  duration:250,
+}).add({
+  targets: '#im0',
+  opacity: [0 , 1],
+  easing: 'easeInOutQuad',
+  duration:500,
+});
+
+
+tl2.add({
+  targets: '#gb1',
+  scaleX: 1,
+  scaleY: 1,
+  duration:230,
+  easing: 'easeInOutQuad',
+  height: ['350', '20'],
+  borderWidth: '0px',
+  
+ }).add({
+  targets: '#gb1',
+  right:'25%',
+  borderRadius:['0%', '50%'],
+  easing: 'easeInOutQuad',
+  delay: 0,
+  scale: 3,
+  top: ['50%', '70%'],
+   borderWidth: ['0px' ,'2px'],
+  duration:250,
+}).add({
+  targets: '#im1',
+  opacity: [0 , 1],
+  easing: 'easeInOutQuad',
+  duration:500,
+});
+
+
+
+function enterButton() {
+  if (tl.reversed) tl.reverse();
+  console.log(tl);
+  tl.play();
+ }
+ 
+function enterButton2() {
+  if (tl2.reversed) tl2.reverse();
+  console.log(tl2);
+  tl2.play();
+ }
+
+function leaveButton() {
+  if (!tl.reversed) tl.reverse();
+  tl.play();
+
+}
+
+function leaveButton2() {
+  if (!tl2.reversed) tl2.reverse();
+  tl2.play();
+
+}
+
+
+$(".cl0").mouseenter(function(){
+enterButton();
+});
+
+$(".cl1").mouseenter(function(){
+enterButton2();
+});
+
+$(".cl0").mouseleave(function(){
+leaveButton();
+});
+
+$(".cl1").mouseleave(function(){
+leaveButton2();
+});
 
 
 
