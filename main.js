@@ -454,7 +454,7 @@ tl.add({
   
  }).add({
   targets: '#gb0',
-  left:'25%',
+  left:'30%',
   borderRadius:['0%', '50%'],
   easing: 'easeInOutQuad',
   delay: 0,
@@ -481,7 +481,7 @@ tl2.add({
   
  }).add({
   targets: '#gb1',
-  right:'25%',
+  right:'30%',
   borderRadius:['0%', '50%'],
   easing: 'easeInOutQuad',
   delay: 0,
