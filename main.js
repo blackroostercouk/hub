@@ -404,7 +404,8 @@ $(".workcollection").find(".collectioncontainer").eq(1).addClass("ters");
 	   
 	    function randomB(wordK){
 	     
-            var wnum = wordK.length;
+            var wnum = wordK.find("span").length;
+   
             var wran1 = getRandomInt(1, wnum);
 	    var wran2 = getRandomInt(1, wnum);
             wordK.find("span").eq(wran1).css("color","#fdc211");
