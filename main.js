@@ -481,7 +481,7 @@ tl2.add({
   
  }).add({
   targets: '#gb1',
-  right:'0%',
+  right:'20%',
   borderRadius:['0%', '50%'],
   easing: 'easeInOutQuad',
   delay: 0,
