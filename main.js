@@ -391,10 +391,34 @@ $(".itemmenu3").mouseleave(function(){
 
 $(".workcollection").find(".collectioncontainer").eq(1).addClass("ters");
 
-
+    function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
   $(document).ready(function() {
 	    $(".sphead").lettering();
+	    $(".whead").lettering();
+	    var wnume = $(".whead").length;
+	   
+	    function randomB(wordK){
+	     
+            var wnum = wordK.length;
+            var wran1 = getRandomInt(1, wnum);
+	    var wran2 = getRandomInt(1, wnum);
+            wordK.find("span").eq(wran1).css("color","#fdc211");
+	    wordK.find("span").eq(wran2).css("color","#fdc211");
+	    }
+	  
+	  var o;
+	  for (o = 0; o < wnume; o++) {
+		  
+		randomB($(".whead").eq(o));  
+		  
+           }
+	    
+	  
       var deger1 = $(".sphead").eq(0).find("span").length;
       var deger2 = $(".sphead").eq(1).find("span").length;
       
