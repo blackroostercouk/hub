@@ -400,6 +400,8 @@ $(".workcollection").find(".collectioncontainer").eq(1).addClass("ters");
   $(document).ready(function() {
 	    $(".sphead").lettering();
 	    $(".whead").lettering();
+	    $("#khead").lettering();
+	   
 	    var wnume = $(".whead").length;
 	   
 	    function randomB(wordK){
@@ -411,6 +413,8 @@ $(".workcollection").find(".collectioncontainer").eq(1).addClass("ters");
             wordK.find("span").eq(wran1).css("color","#fdc211");
 	    wordK.find("span").eq(wran2).css("color","#fdc211");
 	    }
+	  
+	    randomB($("#khead"));
 	  
 	  var o;
 	  for (o = 0; o < wnume; o++) {
