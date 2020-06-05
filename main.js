@@ -194,6 +194,22 @@ anime({
   
 }
 
+/*g
+function enterButton() { leftSide(-10) };
+function leaveButton() { leftSide(0) };
+
+function rightSE() { rightS(10) };
+function rightSEop() { rightS(0) };
+
+function ortext() { otext(0.9) };
+function otextop() { otext(1) };
+
+function curve1() { crve1(1.5,-5,['#1E1E1E', '#FFC200']) };
+function curve1op() { crve1(1,0,['#FFC200', '#1E1E1E']) };
+g*/
+var md = new MobileDetect(window.navigator.userAgent);
+
+console.log(md.mobile());
 
 function enterButton() { leftSide(-20) };
 function leaveButton() { leftSide(0) };
