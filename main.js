@@ -262,8 +262,16 @@ anime({
   /*-40*/
 }
 
+if(md.mobile() != null)
+{
+function item1Enter() { item1Anim(-20) };
+function item1Leave() { item1Anim(0) };
+}
+else
+{
 function item1Enter() { item1Anim(-40) };
 function item1Leave() { item1Anim(0) };
+}
 
 function item2Anim(rotate,scaleX,scaleY) {
 anime.remove('.iitem');
@@ -292,9 +300,14 @@ anime({
  });
   /*50*/
 }
-
+if(md.mobile() != null)
+{
+function item3Enter() { item3Anim(30) };
+function item3Leave() { item3Anim(0) };
+}else{
 function item3Enter() { item3Anim(50) };
 function item3Leave() { item3Anim(0) };
+}
 
 function leftArrowAnim(opacity,transformX) {
 anime.remove('.leftarrow');
@@ -378,9 +391,14 @@ anime({
  });
   /*[0,-30] */
 }
-
+if(md.mobile() != null)
+{
+function piece1MEnter() { piece1M([0,-10]) };
+function piece1MLeave() { piece1M([-10,0]) };
+}else{
 function piece1MEnter() { piece1M([0,-30]) };
 function piece1MLeave() { piece1M([-30,0]) };
+}
 
 function piece3M(translateX) {
 anime.remove('.piece3');
@@ -392,9 +410,15 @@ anime({
  });
 
 }
+
+if(md.mobile() != null)
+{
+function piece3MEnter() { piece3M([0,10]) };
+function piece3MLeave() { piece3M([10,0]) };
+}else{
 function piece3MEnter() { piece3M([0,30]) };
 function piece3MLeave() { piece3M([30,0]) };
-
+}
 
 $(".itemmenu3").mouseenter(function(){ 
   piece1MEnter();
