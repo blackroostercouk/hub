@@ -208,7 +208,7 @@ function rightSEop() { rightS(0) };
 function ortext() { otext(0.9) };
 function otextop() { otext(1) };
 
-function curve1() { crve1(1.5,-5,['#1E1E1E', '#FFC200']) };
+function curve1() { crve1(1.3,-5,['#1E1E1E', '#FFC200']) };
 function curve1op() { crve1(1,0,['#FFC200', '#1E1E1E']) };
 }
 else{
