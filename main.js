@@ -193,8 +193,12 @@ anime({
  });
   
 }
+var md = new MobileDetect(window.navigator.userAgent);
 
-/*g
+//console.log(md.mobile());
+
+if(md.mobile() != null)
+{
 function enterButton() { leftSide(-10) };
 function leaveButton() { leftSide(0) };
 
@@ -206,11 +210,8 @@ function otextop() { otext(1) };
 
 function curve1() { crve1(1.5,-5,['#1E1E1E', '#FFC200']) };
 function curve1op() { crve1(1,0,['#FFC200', '#1E1E1E']) };
-g*/
-var md = new MobileDetect(window.navigator.userAgent);
-
-console.log(md.mobile());
-
+}
+else{
 function enterButton() { leftSide(-20) };
 function leaveButton() { leftSide(0) };
 
@@ -222,6 +223,11 @@ function otextop() { otext(1) };
 
 function curve1() { crve1(1.4,-15,['#1E1E1E', '#FFC200']) };
 function curve1op() { crve1(1,0,['#FFC200', '#1E1E1E']) };
+}
+
+
+
+
 
 
 
