@@ -615,6 +615,61 @@ leaveButton2();
 });
 
 
+var tl888 = anime.timeline({
+  easing: 'easeInQuint',
+  duration: 500,
+  autoplay:false, 
+});
+
+tl888.add({
+  targets: '#circleanim',
+  borderRadius: ['50%', '0%'],
+  easing: 'easeOutQuint',
+  duration: 500 ,
+  delay:200,
+}).add({
+  targets: '#circleanim',
+  easing: 'easeOutQuint',
+  width: [50, 350],
+  height: [50, 290],
+  background:['#1e1e1e','#f8f8f8'],
+  duration: 500
+}).add({
+  targets: '#imgarrow',
+  opacity: [1,0],
+  duration:10,
+}).add({
+  targets:'#nextworkimg',
+  translateX: [-350 , 350],
+  easing: 'easeOutQuint',
+  duration: 1000
+});
+
+
+
+
+function enterButton888() {
+  if (tl888.reversed) tl888.reverse();
+  console.log(tl888);
+  tl888.play();
+ }
+
+function leaveButton888() {
+  if (!tl888.reversed) tl888.reverse();
+  tl888.play();
+
+}
+
+$(".main").mouseenter(function(){
+enterButton888();
+});
+
+
+$(".main").mouseleave(function(){
+leaveButton888();
+});
+
+
 
 
 
