@@ -573,7 +573,7 @@ tl2.add({
 
 
 
-function enterButton() {
+function enterButton3() {
   if (tl.reversed) tl.reverse();
   console.log(tl);
   tl.play();
@@ -585,7 +585,7 @@ function enterButton2() {
   tl2.play();
  }
 
-function leaveButton() {
+function leaveButton3() {
   if (!tl.reversed) tl.reverse();
   tl.play();
 
@@ -599,7 +599,7 @@ function leaveButton2() {
 
 
 $(".cl0").mouseenter(function(){
-enterButton();
+enterButton3();
 });
 
 $(".cl1").mouseenter(function(){
@@ -607,7 +607,7 @@ enterButton2();
 });
 
 $(".cl0").mouseleave(function(){
-leaveButton();
+leaveButton3();
 });
 
 $(".cl1").mouseleave(function(){
