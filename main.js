@@ -23,6 +23,20 @@ const circle2 = new mojs.Shape({
 
 });
 
+//yeni eklenen
+const circle3 = new mojs.Shape({
+  parent:   '#searchb .dot',
+  fill:      {'#1e1e1e' : 'none'},
+  stroke:  {'none' : '#1e1e1e'},
+  strokeWidth: 5,
+  scale :    { 0.070  : 0.30, easing: 'quad.out' },
+  isShowStart:  true,
+  duration:  500,
+  
+
+});
+//yeni eklenen
+
 
 
 class Facebook extends mojs.CustomShape {
@@ -37,6 +51,16 @@ class Linkedin extends mojs.CustomShape {
   getLength () { return 144.066; } 
 }
 mojs.addShape( 'linkedin', Linkedin ); 
+
+//yeni eklenen
+
+class Search extends mojs.CustomShape {
+  getShape () { return '<path d="M23.8,21.6l-6.2-6.2c1.2-1.6,1.9-3.6,1.9-5.7c0-5.4-4.4-9.7-9.7-9.7C4.4,0,0,4.4,0,9.7c0,5.4,4.4,9.7,9.7,9.7 c2,0,3.9-0.6,5.5-1.7l6.2,6.2C21.5,24,23.8,21.6,23.8,21.6z M2.9,9.7c0-3.8,3.1-6.9,6.9-6.9s6.9,3.1,6.9,6.9s-3.1,6.9-6.9,6.9 C5.9,16.6,2.9,13.5,2.9,9.7z"/>'; }
+  getLength () { return 144.066; } 
+}
+mojs.addShape( 'search', Search ); 
+
+//yenieklenen
 
 
 const facebook = new mojs.Shape({
@@ -75,12 +99,33 @@ const linkedin = new mojs.Shape({
     duration:  500,
 });
 
+//yeni eklenen
+const search = new mojs.Shape({
+  shape:    'search',
+  parent:   '#searchb .ic',
+  fill:     'none',
+  stroke:   '#1e1e1e',
+  strokeWidth: 1.4,
+  strokeDasharray: '100%',
+  strokeDashoffset: { '100%' : '0' }, easing: 'quint.in',
+  y: 27,
+  x: 28,
+  scale: 0.7,
+  duration:  500,
+  
+}).then({
+    fill:  { 'none' : '#1e1e1e' }, easing: 'quint.in',
+    duration:  500,
+});
+//yeni eklenen
+
 const timeline = new mojs.Timeline({ speed: 1.5 });
 const timeline2 = new mojs.Timeline({ speed: 1.5 });
+const timeline3 = new mojs.Timeline({ speed: 1.5 });
 
 timeline.add(circle, facebook);
-
 timeline2.add(circle2, linkedin);
+timeline3.add(circle3, linkedin);
 
 $(".eventhan").mouseenter(function(){
    timeline.play();
@@ -98,6 +143,15 @@ $(".eventhan2").mouseenter(function(){
 
 $(".eventhan2").mouseleave(function(){
    timeline2.playBackward();
+});
+
+$(".eventhan3").mouseenter(function(){
+   timeline3.play();
+
+});
+
+$(".eventhan3").mouseleave(function(){
+   timeline3.playBackward();
 });
 
 
