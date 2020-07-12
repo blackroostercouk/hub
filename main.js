@@ -590,6 +590,7 @@ tl.add({
   scale: 3,
   top: ['50%', '70%'],
   borderWidth: ['0px' ,'2px'],
+  borderColor:'#ff00ff',
   duration:250,
 }).add({
   targets: '#im0',
@@ -616,7 +617,8 @@ tl2.add({
   delay: 0,
   scale: 3,
   top: ['50%', '70%'],
-   borderWidth: ['0px' ,'2px'],
+  borderWidth: ['0px' ,'2px'],
+  borderColor:'#ff00ff',	
   duration:250,
 }).add({
   targets: '#im1',
