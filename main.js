@@ -125,7 +125,7 @@ const timeline3 = new mojs.Timeline({ speed: 1.5 });
 
 timeline.add(circle, facebook);
 timeline2.add(circle2, linkedin);
-timeline3.add(circle3, linkedin);
+timeline3.add(circle3, search);
 
 $(".eventhan").mouseenter(function(){
    timeline.play();
