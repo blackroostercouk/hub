@@ -251,7 +251,7 @@ $( ".collectioncontainer" ).each(function( index ) {
 
 
 
-/*var tl = anime.timeline({
+var tl = anime.timeline({
    easing: 'easeInOutQuad',
    duration: 750,
    autoplay: false,
@@ -268,23 +268,17 @@ var tl2 = anime.timeline({
 
 tl.add({
   targets: '#gb0',
-  scaleX: 1,
-  scaleY: 1,
-  duration:230,
-  easing: 'easeInOutQuad',
-  height: ['350', '20'],
-  borderWidth: '0px',
+  height:15,
+  easing: 'easeOutQuint',
+  duration:500,
   
  }).add({
   targets: '#gb0',
-  left:'21%',
-  borderRadius:['0%', '50%'],
-  easing: 'easeInOutQuad',
-  delay: 0,
-  scale: 3,
-  top: ['50%', '70%'],
-  borderWidth: ['0px' ,'1px'],
-  duration:250,
+  easing: 'easeOutQuint',
+  scale: [1,4],
+  borderRadius: ['0%' , '50%'],
+  delay:500,
+  duration:500,
 }).add({
   targets: '#im0',
   opacity: [0 , 1],
@@ -360,7 +354,7 @@ leaveButton3();
 
 $(".cl1").mouseleave(function(){
 leaveButton2();
-});*/
+});
 
 ////yeni
 
