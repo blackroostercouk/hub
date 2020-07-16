@@ -251,7 +251,7 @@ $( ".collectioncontainer" ).each(function( index ) {
 
 
 
-var tl = anime.timeline({
+/*var tl = anime.timeline({
    easing: 'easeInOutQuad',
    duration: 750,
    autoplay: false,
@@ -360,7 +360,107 @@ leaveButton3();
 
 $(".cl1").mouseleave(function(){
 leaveButton2();
-});
+});*/
+
+////yeni
+
+
+
+/*let servicesW = document.querySelectorAll('.ppm');
+
+servicesW.forEach((service) => {
+  service.addEventListener('mouseenter', (event) => {
+    anime.remove(service.querySelector('.#gb0'));
+   // anime.remove(service.querySelector('.yellowbit .atag img'));
+   // anime.remove(service.querySelector('.ybblack'));
+
+
+      /*anime({
+      targets: service.querySelector('#gb0'),
+      height:15,
+      easing: 'easeOutQuint',
+      duration:500,
+     });
+     anime({
+      targets: service.querySelector('.yellowbit'),
+      easing: 'easeOutQuint',
+      scale: [1,4],
+      borderRadius: ['0%' , '50%'],
+      delay:500,
+      duration:500,
+     });
+     anime({
+      targets: service.querySelector('.yellowbit .atag img'),
+      opacity: [0, 1],
+      easing: 'easeOutQuint',
+      delay:500,
+      duration:500,
+     });
+     anime({
+      targets: service.querySelector('.ybblack'),
+      height:15,
+      easing: 'easeOutQuint',
+      opacity:[1,0],
+      duration:500,
+     });
+     anime({
+      targets: service.querySelector('.ybblack'),
+      easing: 'easeOutQuint',
+      scale: [1,5],
+      borderRadius: ['0%' , '50%'],
+      duration:500,
+      delay:500,
+      opacity:0,
+     });
+     anime({
+      targets: service.querySelector('.ybblack'),
+      opacity:[1,0],
+      duration:1500,
+      scale: [1,8],
+      backgroundColor: ['#1e1e1e','#f8f8f8'],
+      delay:1000,
+      easing: 'easeOutQuint',
+      //autoplay:false,
+      loop:true, 
+        });
+  });
+  
+  service.addEventListener('mouseleave', (event) => {
+   anime.remove(service.querySelector('.yellowbit'));
+   anime.remove(service.querySelector('.yellowbit .atag img'));
+   anime.remove(service.querySelector('.ybblack'));
+   anime({
+      targets: service.querySelector('.yellowbit .atag img'),
+      opacity: [1,0],
+      easing: 'easeOutQuint',
+      duration:500,
+     });
+     anime({
+      targets: service.querySelector('.yellowbit'),
+      easing: 'easeOutQuint',
+      scale: [4,1],
+      borderRadius: ['50%' , '0%'],
+      duration:500,
+     });
+   anime({
+      targets: service.querySelector('.yellowbit'),
+      height: 350,
+      easing: 'easeOutQuint',
+      delay:1000,
+      duration:500,
+     });
+     
+      anime({
+      targets: service.querySelector('.ybblack'),
+      opacity:0,
+      duration:500,
+      scale: 1,
+      easing: 'easeOutQuint',
+      });
+  });
+});*/
+
+///yeni
 
 
 var tl888 = anime.timeline({
