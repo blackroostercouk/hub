@@ -251,7 +251,7 @@ $( ".collectioncontainer" ).each(function( index ) {
 
 
 
-var tl = anime.timeline({
+/*var tl = anime.timeline({
    easing: 'easeInOutQuad',
    duration: 750,
    autoplay: false,
@@ -287,7 +287,7 @@ tl.add({
 });*/
 
 
-tl2.add({
+/*tl2.add({
   targets: '#gb1',
   scaleX: 1,
   scaleY: 1,
@@ -354,7 +354,7 @@ leaveButton3();
 
 $(".cl1").mouseleave(function(){
 leaveButton2();
-});
+});*/
 
 ////yeni
 
