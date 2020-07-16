@@ -245,7 +245,7 @@ $( ".collectioncontainer" ).each(function( index ) {
      $(this).addClass('cl'+index+'');
      $(this).find(".cub2").find(".cub").attr('id','gb'+index+'');
      $(this).find(".cub2").find(".cub").find(".embedt").attr('id','im'+index+'');
-     $(this).find(".cub2").find(".cub").attr('id','dr'+index+'');	
+     $(this).find(".cub2").find(".plancvf").attr('id','dr'+index+'');	
      
 });
 
