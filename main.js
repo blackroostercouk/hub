@@ -318,12 +318,12 @@ anime({
 
 if(md.mobile() != null)
 {
-function item1Enter() { item1Anim(-4) };
+function item1Enter() { item1Anim(-20) };
 function item1Leave() { item1Anim(0) };
 }
 else
 {
-function item1Enter() { item1Anim(-40) };
+function item1Enter() { item1Anim(-4) };
 function item1Leave() { item1Anim(0) };
 }
 
