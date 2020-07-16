@@ -178,7 +178,7 @@ function update() {
   TweenMax.to(ball2, 0.2, {top:(mouse.y-2.5), left:(mouse.x-2.5), ease:Back.easeIn, ease:Bounce.easeOut});
 }
 
-
+var md = new MobileDetect(window.navigator.userAgent);
 
 $(".bol4").hide();
 $(".leftarrow").hide();
@@ -245,7 +245,7 @@ anime({
  });
   
 }
-var md = new MobileDetect(window.navigator.userAgent);
+
 
 
 
@@ -406,7 +406,7 @@ function rightArrowLeave() { rightArrowAnim([0,1],[60,0]) };
 
 ///önemli
 $(".itemmenu2").mouseenter(function(){ 
-if(md.mobile() != null || md.mobile() != '' || md.mobile() != ' ')
+if(md.phone() != null || md.phone() != '' || md.phone() != ' ')
 {
 $(".leftarrow").show();
 $(".rightarrow").show(); 
