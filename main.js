@@ -279,12 +279,12 @@ tl.add({
   borderRadius: ['0%' , '50%'],
   delay:500,
   duration:500,
-}).add({
+});/*.add({
   targets: '#im0',
   opacity: [0 , 1],
   easing: 'easeInOutQuad',
   duration:500,
-});
+});*/
 
 
 tl2.add({
