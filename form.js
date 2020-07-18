@@ -1,4 +1,9 @@
 
+function validateEmail(emailt) {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(emailt);
+}
+
 $( "#name" ).focus(function() {
   $(this).val(' ');
   $('#name').get(0).focus();
@@ -255,6 +260,13 @@ Webflow.push(function() {
        $("#warningtext").text("You need to fill in your email address");
        $("#alertwarning").show();
        return false;
+    }
+	  
+    if(!validateEmail(formemail))
+    {
+     $("#warningtext").text("You need to fill in your email address");
+     $("#alertwarning").show();
+     return false;
     }
     formmessage = $("#message-2").val();
      if(formmessage == "" || formmessage == "your message"){
