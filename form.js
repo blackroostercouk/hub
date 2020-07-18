@@ -1,4 +1,3 @@
-$("#email-form").attr("onsubmit","return validateForm()");
 
 $( "#name" ).focus(function() {
   $(this).val(' ');
@@ -76,15 +75,15 @@ $('#message').click(function(){
 
 
 $( "#name" ).keyup(function() {
-     $('#fname').val($(this).html());
+     $('#name-2').val($(this).html());
 });
 
 $( "#emailc" ).keyup(function() {
-     $('#femail').val($(this).html());
+     $('#email').val($(this).html());
 });
 var chardeg;
 $( "#message" ).keyup(function() {
-     $('#fmessage').val($(this).html());
+     $('#message-2').val($(this).html());
      chardeg = $('#message').html().length;
 
      if(chardeg > 100)
@@ -204,7 +203,7 @@ anime({
   autoplay: true,
     delay:2500,
      complete: function(anim) {
-     $("#thankm").html("Thank's "+$('#fname').val()+"! Your submission received!");
+     $("#thankm").html("Thanks "+$('#name-2').val()+"! We received your message!");
      $("#thankm").lettering();
      getb();
   }
@@ -223,18 +222,56 @@ function getb()
 $('#thankm').css('opacity','1');
 anime({
   targets: '#thankm span',
-  top: '30px',
   opacity:[0,1],
+  background:['#1e1e1e','#f8f8f8'],
   delay: anime.stagger(50),
   autoplay: true,
 });
 }
 
+var formname;
+var formemail;
+var formmessage;
 
+var Webflow = Webflow || [];
+Webflow.push(function() {
 
+  // === Custom Form Handling ===
+  
+  // unbind webflow form handling
+  //$(document).off('submit');
 
+  // new form handling
+  $('#email-form').submit(function(evt) {
+    //evt.preventDefault();
+    formname = $("#name-2").val();
+    if(formname == "" || formname == "name"){
+       $("#warningtext").text("You need to fill in your name");
+       $("#alertwarning").show();
+       return false;
+    }
+    formemail = $("#email").val();
+    if(formemail == "" || formemail == "email address"){
+       $("#warningtext").text("You need to fill in your email address");
+       $("#alertwarning").show();
+       return false;
+    }
+    formmessage = $("#message-2").val();
+     if(formmessage == "" || formmessage == "your message"){
+       $("#warningtext").text("You need to write a message");
+       $("#alertwarning").show();
+       return false;
+    }
+    else{
+    $(document).on('submit');
+    flame();
+    
+    }
+  });
+});
 
+$("#closealert").click(function(){
+      $("#alertwarning").hide();
+});
 
-
-
-
+$("#alertwarning").hide();
