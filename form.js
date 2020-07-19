@@ -95,7 +95,7 @@ $( "#emailc" ).keyup(function() {
 var chardeg;
 $( "#message" ).keyup(function() {
      $('#message-2').val($(this).html());
-     chardeg = $('#message').html().length;
+    /* chardeg = $('#message').html().length;
 
      if(chardeg > 100)
        {
@@ -113,7 +113,7 @@ $( "#message" ).keyup(function() {
        {
           $(this).css("font-size","50px");
          $(this).css("line-height","18px");
-       }
+       }*/
 });
 
 
