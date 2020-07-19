@@ -1,3 +1,6 @@
+function randomNumberyy(minyy, maxyy) {
+  return Math.random() * (maxyy - minyy) + minyy;
+}
 
 function validateEmail(emailt) {
   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -35,6 +38,7 @@ function letterdis(length,target)
 
  $('#name').click(function(){
       letterdis($("#name").find('span').length , $("#name"));
+      $('#alertwarning').hide();
       if($('#emailc').html() == "" || $('#emailc').html() == "email address")
         {
             $('#emailc').html(deg1);
@@ -49,6 +53,7 @@ function letterdis(length,target)
 
 $('#emailc').click(function(){
       letterdis($("#emailc").find('span').length , $("#emailc"));
+      $('#alertwarning').hide();
       if($('#name').html() == "" || $('#name').html() == "name")
         {
             $('#name').html(deg);
@@ -66,6 +71,7 @@ $('#emailc').click(function(){
 
 $('#message').click(function(){
       letterdis($("#message").find('span').length , $("#message"));
+       $('#alertwarning').hide();
      if($('#name').html() == "" || $('#name').html() == "name")
         {
             $('#name').html(deg);
@@ -112,6 +118,7 @@ $( "#message" ).keyup(function() {
 
 
 $("#name").focusout(function(){
+ $('#alertwarning').hide();
     if($('#name').html() == "")
       {
           $('#name').html(deg);
@@ -121,6 +128,7 @@ $("#name").focusout(function(){
 
 
 $("#emailc").focusout(function(){
+ $('#alertwarning').hide();
     if($('#emailc').html() == "")
       {
           $('#emailc').html(deg1);
@@ -131,6 +139,7 @@ $("#emailc").focusout(function(){
 
 
 $("#message").focusout(function(){
+ $('#alertwarning').hide();
     if($('#message').html() == "")
       {
           $('#message').html(deg2);
@@ -210,6 +219,16 @@ anime({
      complete: function(anim) {
      $("#thankm").html("Thanks "+$('#name-2').val()+"! We received your message!");
      $("#thankm").lettering();
+     var addText = $('#name-2').val().length;
+     var alltext = $("#thankm").find('span').length;
+     var newbit1 = randomNumberyy(6,6+addText);
+     var newbit2 = randomNumberyy(6,6+addText);
+     var iii;
+     for (iii = 6; iii < 8+addText; iii++) {
+      $("#thankm").find('span').eq(iii).attr("style","font-family:Brimanmid, sans-serif;");
+      }
+     $("#thankm").find('span').eq(Math.floor(newbit1)).css("color","#ffc200");
+     $("#thankm").find('span').eq(Math.floor(newbit2)).css("color","#ffc200");
      getb();
   }
 
@@ -248,7 +267,7 @@ Webflow.push(function() {
 
   // new form handling
   $('#email-form').submit(function(evt) {
-    //evt.preventDefault();
+   // evt.preventDefault();
     formname = $("#name-2").val();
     if(formname == "" || formname == "name"){
        $("#warningtext").text("You need to fill in your name");
@@ -276,6 +295,7 @@ Webflow.push(function() {
     }
     else{
     $(document).on('submit');
+    $("#centerpos").css("text-align","center");
     flame();
     
     }
