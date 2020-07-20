@@ -293,6 +293,13 @@ Webflow.push(function() {
        $("#alertwarning").show();
        return false;
     }
+   var response2 = grecaptcha.getResponse();
+   if(response2.length == 0)
+    {
+     $("#warningtext").text("Please confirm you are human");
+     $("#alertwarning").show();
+     return false;      
+    }
     else{
     $(document).on('submit');
     $("#centerpos").css("text-align","center");
