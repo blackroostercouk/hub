@@ -529,48 +529,46 @@ var tl99 = anime.timeline({
 
 tl7.add({
   targets: '.lineicon',
-  width:6,
-  height:6,
+  width:'6px',
+  height:['104px','6px'],
   easing: 'easeOutQuint',
   duration:500,
  }).add({
   targets: '.lineicon',
-  scale:8,
+  width:['6px','48px'],
+  height:['6px','48px'],
   translateX: -10,
   borderRadius: '50%',
   duration:400,
-  marginLeft: ['3px','25px'],
-  marginRight: ['3px','25px'],
+  marginLeft: ['2px','5px'],
+  marginRight: ['2px','5px'],
   easing: 'easeOutQuint',
   
  }).add({
     targets: '.linkf',
     opacity: [0 , 1],
-    translateX: -0.5,
-    translateY: -0.5,
  });
  
  tl99.add({
   targets: '.lineicon2',
-  width:6,
-  height:6,
+   width:'6px',
+  height:['104px','6px'],
   easing: 'easeOutQuint',
   duration:500,
  }).add({
   targets: '.lineicon2',
-  scale:8,
+  width:['6px','48px'],
+  height:['6px','48px'],
   translateX: -10,
   borderRadius: '50%',
   duration:400,
-  marginLeft: ['3px','25px'],
-  marginRight: ['3px','25px'],
+  marginLeft: ['2px','5px'],
+  marginRight: ['2px','5px'],
   easing: 'easeOutQuint',
   
  }).add({
     targets: '.linkg',
     opacity: [0 , 1],
-    translateX: -0.5,
-    translateY: -0.5,
  });
 
 
