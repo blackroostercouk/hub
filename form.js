@@ -36,7 +36,7 @@ function letterdis(length,target)
     }
 }
 
- $('#name').click(function(){
+ $('#name').focus(function(){
       letterdis($("#name").find('span').length , $("#name"));
       $('#alertwarning').hide();
       if($('#emailc').html() == "" || $('#emailc').html() == "email address")
@@ -51,7 +51,7 @@ function letterdis(length,target)
         }
    });
 
-$('#emailc').click(function(){
+$('#emailc').focus(function(){
       letterdis($("#emailc").find('span').length , $("#emailc"));
       $('#alertwarning').hide();
       if($('#name').html() == "" || $('#name').html() == "name")
@@ -69,7 +69,7 @@ $('#emailc').click(function(){
 
    });
 
-$('#message').click(function(){
+$('#message').focus(function(){
       letterdis($("#message").find('span').length , $("#message"));
        $('#alertwarning').hide();
      if($('#name').html() == "" || $('#name').html() == "name")
@@ -117,7 +117,7 @@ $( "#message" ).keyup(function() {
 });
 
 
-$("#name").focusout(function(){
+$("#name").blur(function(){
  $('#alertwarning').hide();
     if($('#name').html() == "")
       {
@@ -127,7 +127,7 @@ $("#name").focusout(function(){
   });
 
 
-$("#emailc").focusout(function(){
+$("#emailc").blur(function(){
  $('#alertwarning').hide();
     if($('#emailc').html() == "")
       {
@@ -138,7 +138,7 @@ $("#emailc").focusout(function(){
 
 
 
-$("#message").focusout(function(){
+$("#message").blur(function(){
  $('#alertwarning').hide();
     if($('#message').html() == "")
       {
