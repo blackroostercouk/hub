@@ -1,7 +1,7 @@
 
 const SWIRL_OPTS = {
   left: 0, top: 0,
-  fill:           '#1e1e1e',
+  fill:           '#ffc200',
   duration:       'rand(600, 1000)',
   radius:         'rand(10, 20)',
   pathScale:      'rand(.5, 1)',
@@ -12,7 +12,7 @@ const SWIRL_OPTS = {
 
 const SWIRL_OPTS2 = {
   left: 0, top: 0,
-  fill:           '#ffc200',
+  fill:           '#1e1e1e',
   duration:       'rand(600, 1000)',
   radius:         'rand(10, 20)',
   pathScale:      'rand(.5, 1)',
