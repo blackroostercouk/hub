@@ -104,3 +104,54 @@ $("#sendbutton").mouseenter(function(e){
     .replay();
   
 });
+
+$("#submition").mouseleave(function(e){
+  const x = e.pageX,
+        y = { [e.pageY]: e.pageY-150 };
+   swirl1
+   .tune({ x, y })
+    .generate()
+    .replay();
+  
+  swirl2
+    .tune({ x, y })
+    .generate()
+    .replay();
+  
+  swirl3
+    .tune({ x, y })
+    .generate()
+    .replay();
+  
+  swirl4
+    .tune({ x, y })
+    .generate()
+    .replay();
+  
+});
+
+$("#submition").mouseenter(function(e){
+  const x = e.pageX,
+        y = { [e.pageY]: e.pageY-150 };
+   swirl11
+   .tune({ x, y })
+    .generate()
+    .replay();
+  
+  swirl22
+    .tune({ x, y })
+    .generate()
+    .replay();
+  
+  swirl33
+    .tune({ x, y })
+    .generate()
+    .replay();
+  
+  swirl44
+    .tune({ x, y })
+    .generate()
+    .replay();
+  
+});
+
