@@ -73,7 +73,7 @@ swirl44.el.style.zIndex = 9999;
 
 $("#sendbutton").mouseleave(function(e){
   const x = e.pageX,
-        y = { [e.pageY]: e.pageY-150 };
+        y = { [e.pageY-30]: e.pageY-150 };
    swirl1
    .tune({ x, y })
     .generate()
@@ -98,7 +98,7 @@ $("#sendbutton").mouseleave(function(e){
 
 $("#sendbutton").mouseenter(function(e){
   const x = e.pageX,
-        y = { [e.pageY]: e.pageY-150 };
+        y = { [e.pageY-30]: e.pageY-150 };
    swirl11
    .tune({ x, y })
     .generate()
@@ -123,7 +123,7 @@ $("#sendbutton").mouseenter(function(e){
 
 $("#submition").mouseleave(function(e){
   const x = e.pageX,
-        y = { [e.pageY]: e.pageY-150 };
+        y = { [e.pageY-30]: e.pageY-150 };
    swirl1
    .tune({ x, y })
     .generate()
@@ -148,7 +148,7 @@ $("#submition").mouseleave(function(e){
 
 $("#submition").mouseenter(function(e){
   const x = e.pageX,
-        y = { [e.pageY]: e.pageY-150 };
+        y = { [e.pageY-30]: e.pageY-150 };
    swirl11
    .tune({ x, y })
     .generate()
