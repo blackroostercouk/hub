@@ -7,7 +7,7 @@ const SWIRL_OPTS = {
   pathScale:      'rand(.5, 1)',
   swirlFrequency: 'rand(2,4)',
   swirlSize: 'rand(6,14)',
-   zIndex:9999,
+   zIndex: '9999',
 }
 
 const SWIRL_OPTS2 = {
@@ -18,7 +18,7 @@ const SWIRL_OPTS2 = {
   pathScale:      'rand(.5, 1)',
   swirlFrequency: 'rand(2,4)',
   swirlSize: 'rand(6,14)',
-  zIndex:9999,
+  zIndex:'9999',
 }
 
 const swirl1 = new mojs.ShapeSwirl({
