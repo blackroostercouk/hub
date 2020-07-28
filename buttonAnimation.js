@@ -24,36 +24,52 @@ const SWIRL_OPTS2 = {
 const swirl1 = new mojs.ShapeSwirl({
   ...SWIRL_OPTS
 });
+
+swirl1.el.style.zIndex = 9999;
   
 const swirl2 = new mojs.ShapeSwirl({
   ...SWIRL_OPTS,
   direction: -1
 });
 
+swirl2.el.style.zIndex = 9999;
+
 const swirl3 = new mojs.ShapeSwirl({
   ...SWIRL_OPTS
 });
+
+swirl3.el.style.zIndex = 9999;
   
 const swirl4 = new mojs.ShapeSwirl({
   ...SWIRL_OPTS
 });
+
+swirl4.el.style.zIndex = 9999;
+
 const swirl11 = new mojs.ShapeSwirl({
   ...SWIRL_OPTS2
 });
+
+swirl11.el.style.zIndex = 9999;
   
 const swirl22 = new mojs.ShapeSwirl({
   ...SWIRL_OPTS2,
   direction: -1
 });
 
+swirl22.el.style.zIndex = 9999;
+
 const swirl33 = new mojs.ShapeSwirl({
   ...SWIRL_OPTS2
 });
+
+swirl33.el.style.zIndex = 9999;
   
 const swirl44 = new mojs.ShapeSwirl({
   ...SWIRL_OPTS2
 });
 
+swirl44.el.style.zIndex = 9999;
 
 $("#sendbutton").mouseleave(function(e){
   const x = e.pageX,
