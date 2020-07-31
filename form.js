@@ -292,6 +292,7 @@ function warningname(){
   var yc = position.top;
   $("#warningtarget").css("top",position.top-134);
   $("#warningtarget").css("left",position.left+50);
+  $("#warningtext").text("You need to fill in your name");	
   animation2.play();
   animation.play();
   animation3.play();
@@ -305,6 +306,7 @@ function warningemail()
         var yc = position.top;
         $("#warningtarget").css("top",position.top-134);
         $("#warningtarget").css("left",position.left+50);
+	$("#warningtext").text("You need to fill in your email address");   
         animation2.play();
         animation.play();
         animation3.play();	    
@@ -319,6 +321,7 @@ function warningmessage(){
   var yc = position.top;
   $("#warningtarget").css("top",position.top-134);
   $("#warningtarget").css("left",position.left+50);
+  $("#warningtext").text("You need to write a message");	
   animation2.play();
   animation.play();
   animation3.play();
@@ -330,6 +333,7 @@ function warninghuman(){
   var yc = position.top;
   $("#warningtarget").css("top",position.top-134);
   $("#warningtarget").css("left",position.left+50);
+  $("#warningtext").text("Please confirm you are human");
   animation2.play();
   animation.play();
   animation3.play();
@@ -363,8 +367,7 @@ Webflow.push(function() {
     if(formname == "" || formname == "name"){
        //$("#warningtext").text("You need to fill in your name");
        //$("#alertwarning").show();
-        warningname();
-        $("#warningtext").text("You need to fill in your name");	    
+        warningname();    
         return false;
        
     }
@@ -373,7 +376,6 @@ Webflow.push(function() {
        /*$("#warningtext").text("You need to fill in your email address");
        $("#alertwarning").show();*/
        warningemail();
-       $("#warningtext").text("You need to fill in your email address");   
        return false;
     }
 	  
@@ -381,16 +383,14 @@ Webflow.push(function() {
     {
      /*$("#warningtext").text("You need to fill in your email address");
      $("#alertwarning").show();*/
-       warningemail();
-       $("#warningtext").text("You need to fill in your email address");	    
+       warningemail();	    
        return false;
     }
     formmessage = $("#message-2").val();
      if(formmessage == "" || formmessage == "your message"){
        /*$("#warningtext").text("You need to write a message");
        $("#alertwarning").show();*/
-       warningmessage();
-       $("#warningtext").text("You need to write a message");	    
+       warningmessage();    
        return false;
     }
    var response2 = grecaptcha.getResponse();
@@ -398,8 +398,7 @@ Webflow.push(function() {
     {
      /*$("#warningtext").text("Please confirm you are human");
      $("#alertwarning").show();*/
-      warninghuman();
-     $("#warningtext").text("Please confirm you are human");	    
+      warninghuman();	    
      return false;      
     }
     else{
