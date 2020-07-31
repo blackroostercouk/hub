@@ -346,7 +346,7 @@ Webflow.push(function() {
        /*$("#warningtext").text("You need to fill in your email address");
        $("#alertwarning").show();*/
        warningemail();
-       $("#bilitext").text("You need to fill in your email address");*/	    
+       $("#bilitext").text("You need to fill in your email address");   
        return false;
     }
 	  
