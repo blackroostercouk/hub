@@ -292,7 +292,7 @@ function warningname(){
   var yc = position.top;
   $("#warningtarget").css("top",position.top-134);
   $("#warningtarget").css("left",position.left+50);
-  $("#warningtext").text("You need to fill in your name");	
+  $("#warningtext").html("You need to fill in your name");	
   animation2.play();
   animation.play();
   animation3.play();
@@ -306,7 +306,7 @@ function warningemail()
         var yc = position.top;
         $("#warningtarget").css("top",position.top-134);
         $("#warningtarget").css("left",position.left+50);
-	$("#warningtext").text("You need to fill in your email address");   
+	$("#warningtext").html("You need to fill in your email address");   
         animation2.play();
         animation.play();
         animation3.play();	    
@@ -321,7 +321,7 @@ function warningmessage(){
   var yc = position.top;
   $("#warningtarget").css("top",position.top-134);
   $("#warningtarget").css("left",position.left+50);
-  $("#warningtext").text("You need to write a message");	
+  $("#warningtext").html("You need to write a message");	
   animation2.play();
   animation.play();
   animation3.play();
@@ -333,7 +333,7 @@ function warninghuman(){
   var yc = position.top;
   $("#warningtarget").css("top",position.top-134);
   $("#warningtarget").css("left",position.left+50);
-  $("#warningtext").text("Please confirm you are human");
+  $("#warningtext").html("Please confirm you are human");
   animation2.play();
   animation.play();
   animation3.play();
