@@ -292,7 +292,7 @@ function warningname(){
   var yc = position.top;
   $("#warningtarget").css("top",position.top-134);
   $("#warningtarget").css("left",position.left+50);
-  $("#warningtext").html("You need to fill in your name");	
+  $(".warningtextc").text("You need to fill in your name");	
   animation2.play();
   animation.play();
   animation3.play();
