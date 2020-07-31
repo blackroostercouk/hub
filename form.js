@@ -333,8 +333,8 @@ Webflow.push(function() {
        //$("#warningtext").text("You need to fill in your name");
        //$("#alertwarning").show();
        $("#bilitext").text("You need to fill in your name");	    
-       warningname();
        return false;
+       warningname();
     }
     formemail = $("#email").val();
     if(formemail == "" || formemail == "email address"){
