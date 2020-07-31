@@ -364,7 +364,7 @@ Webflow.push(function() {
        //$("#warningtext").text("You need to fill in your name");
        //$("#alertwarning").show();
         warningname();
-        $("#bilitext").text("You need to fill in your name");	    
+        $("#warningtext").text("You need to fill in your name");	    
         return false;
        
     }
@@ -373,7 +373,7 @@ Webflow.push(function() {
        /*$("#warningtext").text("You need to fill in your email address");
        $("#alertwarning").show();*/
        warningemail();
-       $("#bilitext").text("You need to fill in your email address");   
+       $("#warningtext").text("You need to fill in your email address");   
        return false;
     }
 	  
@@ -382,7 +382,7 @@ Webflow.push(function() {
      /*$("#warningtext").text("You need to fill in your email address");
      $("#alertwarning").show();*/
        warningemail();
-       $("#bilitext").text("You need to fill in your email address");	    
+       $("#warningtext").text("You need to fill in your email address");	    
        return false;
     }
     formmessage = $("#message-2").val();
@@ -390,7 +390,7 @@ Webflow.push(function() {
        /*$("#warningtext").text("You need to write a message");
        $("#alertwarning").show();*/
        warningmessage();
-       $("#bilitext").text("You need to write a message");	    
+       $("#warningtext").text("You need to write a message");	    
        return false;
     }
    var response2 = grecaptcha.getResponse();
@@ -399,7 +399,7 @@ Webflow.push(function() {
      /*$("#warningtext").text("Please confirm you are human");
      $("#alertwarning").show();*/
       warninghuman();
-     $("#bilitext").text("Please confirm you are human");	    
+     $("#warningtext").text("Please confirm you are human");	    
      return false;      
     }
     else{
