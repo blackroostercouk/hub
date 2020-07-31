@@ -257,6 +257,66 @@ var formname;
 var formemail;
 var formmessage;
 
+
+/*yenikod*/
+function warningname(){
+  var position = $("#name").position();
+  var xc = position.left;
+  var yc = position.top;
+  $("#warningtarget").css("top",position.top-134);
+  $("#warningtarget").css("left",position.left+50);
+  animation2.play();
+  animation.play();
+  animation3.play();
+}
+
+
+function warningemail(){
+  var position = $("#emailc").position();
+  var xc = position.left;
+  var yc = position.top;
+  $("#warningtarget").css("top",position.top-134);
+  $("#warningtarget").css("left",position.left+50);
+  animation2.play();
+  animation.play();
+  animation3.play();
+}
+
+function warningmessage(){
+  var position = $("#message").position();
+  var xc = position.left;
+  var yc = position.top;
+  $("#warningtarget").css("top",position.top-134);
+  $("#warningtarget").css("left",position.left+50);
+  animation2.play();
+  animation.play();
+  animation3.play();
+}
+
+function warninghuman(){
+  var position = $("#submition2").position();
+  var xc = position.left;
+  var yc = position.top;
+  $("#warningtarget").css("top",position.top-134);
+  $("#warningtarget").css("left",position.left+50);
+  animation2.play();
+  animation.play();
+  animation3.play();
+}
+
+
+
+
+$( window ).resize(function() {
+  var position = $("#name").position();
+  var xc = position.left;
+  var yc = position.top;
+  $("#warningtarget").css("top",position.top-134);
+  $("#warningtarget").css("left",position.left+50);
+});
+/*yenikod*/
+
+
 var Webflow = Webflow || [];
 Webflow.push(function() {
 
@@ -270,34 +330,44 @@ Webflow.push(function() {
    // evt.preventDefault();
     formname = $("#name-2").val();
     if(formname == "" || formname == "name"){
-       $("#warningtext").text("You need to fill in your name");
-       $("#alertwarning").show();
+       //$("#warningtext").text("You need to fill in your name");
+       //$("#alertwarning").show();
+       $("#bilitext").text("You need to fill in your name");	    
+       warningname();
        return false;
     }
     formemail = $("#email").val();
     if(formemail == "" || formemail == "email address"){
-       $("#warningtext").text("You need to fill in your email address");
-       $("#alertwarning").show();
+       /*$("#warningtext").text("You need to fill in your email address");
+       $("#alertwarning").show();*/
+       warningemail();
+       $("#bilitext").text("You need to fill in your email address");	    
        return false;
     }
 	  
     if(!validateEmail(formemail))
     {
-     $("#warningtext").text("You need to fill in your email address");
-     $("#alertwarning").show();
-     return false;
+     /*$("#warningtext").text("You need to fill in your email address");
+     $("#alertwarning").show();*/
+       warningemail();
+       $("#bilitext").text("You need to fill in your email address");	    
+       return false;
     }
     formmessage = $("#message-2").val();
      if(formmessage == "" || formmessage == "your message"){
-       $("#warningtext").text("You need to write a message");
-       $("#alertwarning").show();
+       /*$("#warningtext").text("You need to write a message");
+       $("#alertwarning").show();*/
+       warningmessage();
+       $("#bilitext").text("You need to write a message");	    
        return false;
     }
    var response2 = grecaptcha.getResponse();
    if(response2.length == 0)
     {
-     $("#warningtext").text("Please confirm you are human");
-     $("#alertwarning").show();
+     /*$("#warningtext").text("Please confirm you are human");
+     $("#alertwarning").show();*/
+      warninghuman();
+     $("#bilitext").text("Please confirm you are human");	    
      return false;      
     }
     else{
