@@ -271,16 +271,7 @@ function warningname(){
 }
 
 
-function warningemail(){
-  var position = $("#emailc").position();
-  var xc = position.left;
-  var yc = position.top;
-  $("#warningtarget").css("top",position.top-134);
-  $("#warningtarget").css("left",position.left+50);
-  animation2.play();
-  animation.play();
-  animation3.play();
-}
+
 
 function warningmessage(){
   var position = $("#message").position();
@@ -332,9 +323,16 @@ Webflow.push(function() {
     if(formname == "" || formname == "name"){
        //$("#warningtext").text("You need to fill in your name");
        //$("#alertwarning").show();
-       warningname();	    
-       $("#bilitext").text("You need to fill in your name");	    
-       return false;
+        var position = $("#emailc").position();
+        var xc = position.left;
+        var yc = position.top;
+        $("#warningtarget").css("top",position.top-134);
+        $("#warningtarget").css("left",position.left+50);
+        animation2.play();
+        animation.play();
+        animation3.play();	    
+        $("#bilitext").text("You need to fill in your name");	    
+        return false;
        
     }
     formemail = $("#email").val();
