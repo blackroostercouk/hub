@@ -271,6 +271,19 @@ function warningname(){
 }
 
 
+function warningemail()
+{
+ var position = $("#emailc").position();
+        var xc = position.left;
+        var yc = position.top;
+        $("#warningtarget").css("top",position.top-134);
+        $("#warningtarget").css("left",position.left+50);
+        animation2.play();
+        animation.play();
+        animation3.play();	    
+}
+
+
 
 
 function warningmessage(){
@@ -323,14 +336,7 @@ Webflow.push(function() {
     if(formname == "" || formname == "name"){
        //$("#warningtext").text("You need to fill in your name");
        //$("#alertwarning").show();
-        var position = $("#emailc").position();
-        var xc = position.left;
-        var yc = position.top;
-        $("#warningtarget").css("top",position.top-134);
-        $("#warningtarget").css("left",position.left+50);
-        animation2.play();
-        animation.play();
-        animation3.play();	    
+        warningname();
         $("#bilitext").text("You need to fill in your name");	    
         return false;
        
