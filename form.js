@@ -332,16 +332,17 @@ Webflow.push(function() {
     if(formname == "" || formname == "name"){
        //$("#warningtext").text("You need to fill in your name");
        //$("#alertwarning").show();
+       warningname();	    
        $("#bilitext").text("You need to fill in your name");	    
        return false;
-       warningname();
+       
     }
     formemail = $("#email").val();
     if(formemail == "" || formemail == "email address"){
        /*$("#warningtext").text("You need to fill in your email address");
        $("#alertwarning").show();*/
        warningemail();
-       $("#bilitext").text("You need to fill in your email address");	    
+       $("#bilitext").text("You need to fill in your email address");*/	    
        return false;
     }
 	  
