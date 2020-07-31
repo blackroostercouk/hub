@@ -7,6 +7,31 @@ function validateEmail(emailt) {
   return re.test(emailt);
 }
 
+
+var animation = anime({
+    targets: '#pagec',
+    scale: [0, 1],
+    duration:500,
+    easing: 'easeOutBounce',
+    autoplay:false,
+})
+
+var animation2 = anime({
+    targets: '#prens',
+    fill: ['#000', '#E46868'],
+    easing: 'easeOutQuint',
+    duration:500,
+    autoplay:false,
+})
+
+var animation3 = anime({
+  targets: '#warningtext',
+  opacity:[0,1],
+  easing: 'easeOutQuint',
+  duration:500,
+  delay:500
+});
+
 $( "#name" ).focus(function() {
   $(this).val(' ');
   $('#name').get(0).focus();
@@ -17,7 +42,7 @@ var deg1 = 'email address';
 var deg2 = 'message';
 
 $(document).ready(function() {
-	    $("#name").lettering();
+	$("#name").lettering();
       $("#emailc").lettering();
       $("#message").lettering();
       $(".hellotext").lettering();
@@ -39,6 +64,9 @@ function letterdis(length,target)
  $('#name').focus(function(){
       letterdis($("#name").find('span').length , $("#name"));
       $('#alertwarning').hide();
+      animation.reverse();
+      animation2.reverse();
+      animation3.reverse();
       if($('#emailc').html() == "" || $('#emailc').html() == "email address")
         {
             $('#emailc').html(deg1);
@@ -54,6 +82,9 @@ function letterdis(length,target)
 $('#emailc').focus(function(){
       letterdis($("#emailc").find('span').length , $("#emailc"));
       $('#alertwarning').hide();
+	 animation.reverse();
+      animation2.reverse();
+      animation3.reverse();
       if($('#name').html() == "" || $('#name').html() == "name")
         {
             $('#name').html(deg);
@@ -72,6 +103,9 @@ $('#emailc').focus(function(){
 $('#message').focus(function(){
       letterdis($("#message").find('span').length , $("#message"));
        $('#alertwarning').hide();
+	 animation.reverse();
+      animation2.reverse();
+      animation3.reverse();
      if($('#name').html() == "" || $('#name').html() == "name")
         {
             $('#name').html(deg);
@@ -119,6 +153,9 @@ $( "#message" ).keyup(function() {
 
 $("#name").blur(function(){
  $('#alertwarning').hide();
+	 animation.reverse();
+      animation2.reverse();
+      animation3.reverse();
     if($('#name').html() == "")
       {
           $('#name').html(deg);
@@ -129,6 +166,9 @@ $("#name").blur(function(){
 
 $("#emailc").blur(function(){
  $('#alertwarning').hide();
+	 animation.reverse();
+      animation2.reverse();
+      animation3.reverse();
     if($('#emailc').html() == "")
       {
           $('#emailc').html(deg1);
@@ -140,6 +180,9 @@ $("#emailc").blur(function(){
 
 $("#message").blur(function(){
  $('#alertwarning').hide();
+	 animation.reverse();
+      animation2.reverse();
+      animation3.reverse();
     if($('#message').html() == "")
       {
           $('#message').html(deg2);
@@ -261,29 +304,7 @@ var formmessage;
 /*yenikod*/
 
 
-var animation = anime({
-    targets: '#pagec',
-    scale: [0, 1],
-    duration:500,
-    easing: 'easeOutBounce',
-    autoplay:false,
-})
 
-var animation2 = anime({
-    targets: '#prens',
-    fill: ['#000', '#E46868'],
-    easing: 'easeOutQuint',
-    duration:500,
-    autoplay:false,
-})
-
-var animation3 = anime({
-  targets: '#warningtext',
-  opacity:[0,1],
-  easing: 'easeOutQuint',
-  duration:500,
-  delay:500
-});
 
 
 function warningname(){
