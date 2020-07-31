@@ -259,6 +259,33 @@ var formmessage;
 
 
 /*yenikod*/
+
+
+var animation = anime({
+    targets: '#Page-1',
+    scale: [0, 1],
+    duration:500,
+    easing: 'easeOutBounce',
+    autoplay:false,
+})
+
+var animation2 = anime({
+    targets: '#prens',
+    fill: ['#000', '#E46868'],
+    easing: 'easeOutQuint',
+    duration:500,
+    autoplay:false,
+})
+
+var animation3 = anime({
+  targets: '#warningtext',
+  opacity:[0,1],
+  easing: 'easeOutQuint',
+  duration:500,
+  delay:500
+});
+
+
 function warningname(){
   var position = $("#name").position();
   var xc = position.left;
