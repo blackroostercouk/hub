@@ -40,7 +40,7 @@ var animation4 = anime({
     targets: '#pagec',
     scale: [1, 0],
     duration:500,
-    easing: 'easeOutBounce',
+    easing: 'easeOutQuint',
     autoplay:false,
     delay:500
 })
@@ -160,10 +160,10 @@ function letterdis(length,target)
       letterdis($("#name").find('span').length , $("#name"));
       $('#alertwarning').hide();
 	  if(formalertkontrol == 1)
-      {
-      animreverse();
-      formalertkontrol = 0;
-      }
+          {
+          animreverse();
+          formalertkontrol = 0;
+           }
       //console.log("focusum");	 
       
       if($('#emailc').html() == "" || $('#emailc').html() == "email address")
