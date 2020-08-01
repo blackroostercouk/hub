@@ -1,3 +1,6 @@
+var md2 = new MobileDetect(window.navigator.userAgent);
+
+
 function randomNumberyy(minyy, maxyy) {
   return Math.random() * (maxyy - minyy) + minyy;
 }
@@ -386,41 +389,61 @@ Webflow.push(function() {
    // evt.preventDefault();
     formname = $("#name-2").val();
     if(formname == "" || formname == "name"){
-       //$("#warningtext").text("You need to fill in your name");
-       //$("#alertwarning").show();
+	    if(md2.mobile() != null)
+             {
+       $("#warningtext").text("You need to fill in your name");
+       $("#alertwarning").show();
+       return false;
+	     }else{
         warningname();    
         return false;
-       
+	     }
     }
     formemail = $("#email").val();
     if(formemail == "" || formemail == "email address"){
-       /*$("#warningtext").text("You need to fill in your email address");
-       $("#alertwarning").show();*/
+	     if(md2.mobile() != null){
+       $("#warningtext").text("You need to fill in your email address");
+       $("#alertwarning").show();
+		     return false;
+	     }else
        warningemail();
        return false;
+    }
     }
 	  
     if(!validateEmail(formemail))
     {
-     /*$("#warningtext").text("You need to fill in your email address");
-     $("#alertwarning").show();*/
+	    if(md2.mobile() != null){
+     $("#warningtext").text("You need to fill in your email address");
+     $("#alertwarning").show();
+     return false;
+	    }else{
        warningemail();	    
        return false;
+	    }
     }
     formmessage = $("#message-2").val();
      if(formmessage == "" || formmessage == "your message"){
-       /*$("#warningtext").text("You need to write a message");
-       $("#alertwarning").show();*/
+	      if(md2.mobile() != null){
+       $("#warningtext").text("You need to write a message");
+       $("#alertwarning").show();
+		       return false;
+	      }else{
        warningmessage();    
        return false;
+	      }
     }
    var response2 = grecaptcha.getResponse();
    if(response2.length == 0)
     {
-     /*$("#warningtext").text("Please confirm you are human");
-     $("#alertwarning").show();*/
+	    if(md2.mobile() != null){
+     $("#warningtext").text("Please confirm you are human");
+     $("#alertwarning").show();
+		     return false; 
+	    }else{
       warninghuman();	    
-     return false;      
+     return false;  
+	    }
     }
     else{
     $(document).on('submit');
