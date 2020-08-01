@@ -145,6 +145,23 @@ function letterdis(length,target)
         }
    });
 
+ $('#name').click(function(){
+      letterdis($("#name").find('span').length , $("#name"));
+      $('#alertwarning').hide();
+      console.log("focusum");	 
+      animreverse();
+      if($('#emailc').html() == "" || $('#emailc').html() == "email address")
+        {
+            $('#emailc').html(deg1);
+            $("#emailc").lettering();
+        }
+       if($('#message').html() == "" || $('#message').html() == "message")
+        {
+            $('#message').html(deg2);
+            $("#message").lettering();
+        }
+   });
+
 $('#emailc').focus(function(){
       letterdis($("#emailc").find('span').length , $("#emailc"));
       $('#alertwarning').hide();
