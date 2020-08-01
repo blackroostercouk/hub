@@ -1,5 +1,5 @@
 var md2 = new MobileDetect(window.navigator.userAgent);
-
+var formalertkontrol = 0;
 
 function randomNumberyy(minyy, maxyy) {
   return Math.random() * (maxyy - minyy) + minyy;
@@ -446,7 +446,7 @@ Webflow.push(function() {
 
   // new form handling
 	
-  var formalertkontrol = 0;	
+	
   $('#email-form').submit(function(evt) {
    // evt.preventDefault();
     formname = $("#name-2").val();
