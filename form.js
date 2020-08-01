@@ -42,6 +42,7 @@ var animation4 = anime({
     duration:500,
     easing: 'easeOutBounce',
     autoplay:false,
+    delay:500
 })
 
 var animation5 = anime({
@@ -57,7 +58,7 @@ var animation6 = anime({
   opacity:[1,0],
   easing: 'easeOutQuint',
   duration:500,
-  delay:500
+  
 });
 /*Reverse*/
 
@@ -94,7 +95,7 @@ function warningemail()
 function warningmessage(){
   var position = $("#message").position();
   var xc = position.left;
-  var yc = position.top;
+  var yc = position.top;	
   $("#warningtarget").css("top",position.top-134);
   $("#warningtarget").css("left",position.left+50);
   $(".warningtextc").text("You need to write a message");	
@@ -158,8 +159,13 @@ function letterdis(length,target)
  $('#name').focus(function(){
       letterdis($("#name").find('span').length , $("#name"));
       $('#alertwarning').hide();
-      console.log("focusum");	 
+	  if(formalertkontrol == 1)
+      {
       animreverse();
+      formalertkontrol = 0;
+      }
+      //console.log("focusum");	 
+      
       if($('#emailc').html() == "" || $('#emailc').html() == "email address")
         {
             $('#emailc').html(deg1);
@@ -175,8 +181,13 @@ function letterdis(length,target)
  $('#name').click(function(){
       letterdis($("#name").find('span').length , $("#name"));
       $('#alertwarning').hide();
-      console.log("focusum");	 
+
+      if(formalertkontrol == 1)
+      {
       animreverse();
+      formalertkontrol = 0;
+      }
+
       if($('#emailc').html() == "" || $('#emailc').html() == "email address")
         {
             $('#emailc').html(deg1);
@@ -192,9 +203,11 @@ function letterdis(length,target)
 $('#emailc').focus(function(){
       letterdis($("#emailc").find('span').length , $("#emailc"));
       $('#alertwarning').hide();
-	/* animation.reverse();
-      animation2.reverse();
-      animation3.reverse();*/
+	 if(formalertkontrol == 1)
+      {
+      animreverse();
+      formalertkontrol = 0;
+      }
       if($('#name').html() == "" || $('#name').html() == "name")
         {
             $('#name').html(deg);
@@ -212,10 +225,14 @@ $('#emailc').focus(function(){
 
 $('#message').focus(function(){
       letterdis($("#message").find('span').length , $("#message"));
+	
        $('#alertwarning').hide();
-	/* animation.reverse();
-      animation2.reverse();
-      animation3.reverse();*/
+	if(formalertkontrol == 1)
+      {
+      animreverse();
+      formalertkontrol = 0;
+      }
+	
      if($('#name').html() == "" || $('#name').html() == "name")
         {
             $('#name').html(deg);
@@ -244,9 +261,11 @@ $( "#message" ).keyup(function() {
 
 $("#name").blur(function(){
  $('#alertwarning').hide();
-	/* animation.reverse();
-      animation2.reverse();
-      animation3.reverse();*/
+if(formalertkontrol == 1)
+      {
+      animreverse();
+      formalertkontrol = 0;
+      }	
     if($('#name').html() == "")
       {
           $('#name').html(deg);
@@ -257,9 +276,11 @@ $("#name").blur(function(){
 
 $("#emailc").blur(function(){
  $('#alertwarning').hide();
-	/* animation.reverse();
-      animation2.reverse();
-      animation3.reverse();*/
+if(formalertkontrol == 1)
+      {
+      animreverse();
+      formalertkontrol = 0;
+      }	
     if($('#emailc').html() == "")
       {
           $('#emailc').html(deg1);
@@ -271,9 +292,11 @@ $("#emailc").blur(function(){
 
 $("#message").blur(function(){
  $('#alertwarning').hide();
-	/* animation.reverse();
-      animation2.reverse();
-      animation3.reverse();*/
+if(formalertkontrol == 1)
+      {
+      animreverse();
+      formalertkontrol = 0;
+      }	
     if($('#message').html() == "")
       {
           $('#message').html(deg2);
@@ -422,6 +445,8 @@ Webflow.push(function() {
   //$(document).off('submit');
 
   // new form handling
+	
+  var formalertkontrol = 0;	
   $('#email-form').submit(function(evt) {
    // evt.preventDefault();
     formname = $("#name-2").val();
@@ -432,7 +457,8 @@ Webflow.push(function() {
        $("#alertwarning").show();
        return false;
 	     }else{
-        warningname();    
+        warningname();
+	formalertkontrol = 1;	     
         return false;
 	     }
     }
@@ -444,6 +470,7 @@ Webflow.push(function() {
 		     return false;
 	     }else{
        warningemail();
+       formalertkontrol = 1;
        return false;
     }
     }
@@ -455,7 +482,8 @@ Webflow.push(function() {
      $("#alertwarning").show();
      return false;
 	    }else{
-       warningemail();	    
+       warningemail();
+       formalertkontrol = 1;	    
        return false;
 	    }
     }
@@ -466,7 +494,8 @@ Webflow.push(function() {
        $("#alertwarning").show();
 		       return false;
 	      }else{
-       warningmessage();    
+       warningmessage();
+       formalertkontrol = 1;
        return false;
 	      }
     }
@@ -478,7 +507,8 @@ Webflow.push(function() {
      $("#alertwarning").show();
 		     return false; 
 	    }else{
-      warninghuman();	    
+      warninghuman();
+		    formalertkontrol = 1;
      return false;  
 	    }
     }
