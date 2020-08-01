@@ -132,7 +132,7 @@ function letterdis(length,target)
       letterdis($("#name").find('span').length , $("#name"));
       $('#alertwarning').hide();
       console.log("focusum");	 
-      animreverse()
+      animreverse();
       if($('#emailc').html() == "" || $('#emailc').html() == "email address")
         {
             $('#emailc').html(deg1);
