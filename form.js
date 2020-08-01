@@ -28,7 +28,7 @@ var animation2 = anime({
 })
 
 var animation3 = anime({
-  targets: '#warningtext',
+  targets: '#warningtext2',
   opacity:[0,1],
   easing: 'easeOutQuint',
   duration:500,
