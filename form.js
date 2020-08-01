@@ -125,6 +125,8 @@ function animreverse()
   animation4.restart();
 }
 
+animreverse();
+
 
 
 $( "#name" ).focus(function() {
