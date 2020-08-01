@@ -427,9 +427,27 @@ var formmessage;
 
 
 
+var wherewarning;
+
 
 $( window ).resize(function() {
-  var position = $("#name").position();
+	if(wherewarning == "name")
+	{
+	 var position = $("#name").position();
+	}
+	if(wherewarning == "email")
+	{
+	 var position = $("#emailc").position();
+	}
+	if(wherewarning == "message")
+	{
+	 var position = $("#message").position();
+	}
+	if(wherewarning == "human")
+	{
+	 var position = $("#submition2").position();
+	}
+ 
   var xc = position.left;
   var yc = position.top;
   $("#warningtarget").css("top",position.top-134);
@@ -460,7 +478,8 @@ Webflow.push(function() {
        return false;
 	     }else{
         warningname();
-	formalertkontrol = 1;	     
+	formalertkontrol = 1;
+	wherewarning = "name";	     
         return false;
 	     }
     }
@@ -473,6 +492,7 @@ Webflow.push(function() {
 	     }else{
        warningemail();
        formalertkontrol = 1;
+       wherewarning = "email";	 		     
        return false;
     }
     }
@@ -485,7 +505,8 @@ Webflow.push(function() {
      return false;
 	    }else{
        warningemail();
-       formalertkontrol = 1;	    
+       formalertkontrol = 1;
+       wherewarning = "email";	 		    
        return false;
 	    }
     }
@@ -498,6 +519,7 @@ Webflow.push(function() {
 	      }else{
        warningmessage();
        formalertkontrol = 1;
+		      wherewarning = "message";	 
        return false;
 	      }
     }
@@ -511,6 +533,7 @@ Webflow.push(function() {
 	    }else{
       warninghuman();
 		    formalertkontrol = 1;
+		    wherewarning = "human";	 
      return false;  
 	    }
     }
