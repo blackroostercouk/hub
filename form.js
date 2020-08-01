@@ -21,7 +21,7 @@ var animation = anime({
 
 var animation2 = anime({
     targets: '#prens',
-    fill: ['#000', '#E46868'],
+    fill: ['#000', '#e24a4a'],
     easing: 'easeOutQuint',
     duration:500,
     autoplay:false,
