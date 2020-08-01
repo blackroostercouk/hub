@@ -92,6 +92,12 @@ function warninghuman(){
 
 function animreverse()
 {
+  var position = $("#name").position();
+  var xc = position.left;
+  var yc = position.top;
+  $("#warningtarget").css("top",position.top-134);
+  $("#warningtarget").css("left",position.left+50);
+  $(".warningtextc").text("You need to fill in your name");	
   animation2.reverse();
   animation.reverse();
   animation3.reverse();
