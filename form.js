@@ -405,7 +405,7 @@ Webflow.push(function() {
        $("#warningtext").text("You need to fill in your email address");
        $("#alertwarning").show();
 		     return false;
-	     }else
+	     }else{
        warningemail();
        return false;
     }
