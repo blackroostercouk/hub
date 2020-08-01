@@ -35,6 +35,70 @@ var animation3 = anime({
   delay:500
 });
 
+
+function warningname(){
+  var position = $("#name").position();
+  var xc = position.left;
+  var yc = position.top;
+  $("#warningtarget").css("top",position.top-134);
+  $("#warningtarget").css("left",position.left+50);
+  $(".warningtextc").text("You need to fill in your name");	
+  animation2.restart();
+  animation.restart();
+  animation3.restart();
+}
+
+
+function warningemail()
+{
+ var position = $("#emailc").position();
+        var xc = position.left;
+        var yc = position.top;
+        $("#warningtarget").css("top",position.top-134);
+        $("#warningtarget").css("left",position.left+50);
+	$(".warningtextc").text("You need to fill in your email address");   
+        animation2.restart();
+        animation.restart();
+        animation3.restart();	    
+}
+
+
+
+
+function warningmessage(){
+  var position = $("#message").position();
+  var xc = position.left;
+  var yc = position.top;
+  $("#warningtarget").css("top",position.top-134);
+  $("#warningtarget").css("left",position.left+50);
+  $(".warningtextc").text("You need to write a message");	
+  animation2.restart();
+  animation.restart();
+  animation3.restart();
+}
+
+function warninghuman(){
+  var position = $("#submition2").position();
+  var xc = position.left;
+  var yc = position.top;
+  $("#warningtarget").css("top",position.top-134);
+  $("#warningtarget").css("left",position.left+50);
+  $(".warningtextc").text("Please confirm you are human");
+  animation2.restart();
+  animation.restart();
+  animation3.restart();
+}
+
+
+function animreverse()
+{
+  animation2.reverse();
+  animation.reverse();
+  animation3.reverse();
+}
+
+
+
 $( "#name" ).focus(function() {
   $(this).val(' ');
   $('#name').get(0).focus();
@@ -68,9 +132,7 @@ function letterdis(length,target)
       letterdis($("#name").find('span').length , $("#name"));
       $('#alertwarning').hide();
       console.log("focusum");	 
-      /*animation.reverse();
-      animation2.reverse();
-      animation3.reverse();*/
+      animreverse()
       if($('#emailc').html() == "" || $('#emailc').html() == "email address")
         {
             $('#emailc').html(deg1);
@@ -130,28 +192,9 @@ $( "#name" ).keyup(function() {
 $( "#emailc" ).keyup(function() {
      $('#email').val($(this).html());
 });
-var chardeg;
+
 $( "#message" ).keyup(function() {
      $('#message-2').val($(this).html());
-    /* chardeg = $('#message').html().length;
-
-     if(chardeg > 100)
-       {
-          $(this).css("font-size","70px");
-          $(this).css("line-height","40px");
-       }
-  
-     if(chardeg > 150)
-       {
-          $(this).css("font-size","60px");
-          $(this).css("line-height","30px");
-       }
-  
-     if(chardeg > 200)
-       {
-          $(this).css("font-size","50px");
-         $(this).css("line-height","18px");
-       }*/
 });
 
 
@@ -311,58 +354,7 @@ var formmessage;
 
 
 
-function warningname(){
-  var position = $("#name").position();
-  var xc = position.left;
-  var yc = position.top;
-  $("#warningtarget").css("top",position.top-134);
-  $("#warningtarget").css("left",position.left+50);
-  $(".warningtextc").text("You need to fill in your name");	
-  animation2.play();
-  animation.play();
-  animation3.play();
-}
 
-
-function warningemail()
-{
- var position = $("#emailc").position();
-        var xc = position.left;
-        var yc = position.top;
-        $("#warningtarget").css("top",position.top-134);
-        $("#warningtarget").css("left",position.left+50);
-	$(".warningtextc").text("You need to fill in your email address");   
-        animation2.play();
-        animation.play();
-        animation3.play();	    
-}
-
-
-
-
-function warningmessage(){
-  var position = $("#message").position();
-  var xc = position.left;
-  var yc = position.top;
-  $("#warningtarget").css("top",position.top-134);
-  $("#warningtarget").css("left",position.left+50);
-  $(".warningtextc").text("You need to write a message");	
-  animation2.play();
-  animation.play();
-  animation3.play();
-}
-
-function warninghuman(){
-  var position = $("#submition2").position();
-  var xc = position.left;
-  var yc = position.top;
-  $("#warningtarget").css("top",position.top-134);
-  $("#warningtarget").css("left",position.left+50);
-  $(".warningtextc").text("Please confirm you are human");
-  animation2.play();
-  animation.play();
-  animation3.play();
-}
 
 
 
