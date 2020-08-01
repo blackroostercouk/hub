@@ -67,9 +67,10 @@ function letterdis(length,target)
  $('#name').focus(function(){
       letterdis($("#name").find('span').length , $("#name"));
       $('#alertwarning').hide();
-      animation.reverse();
+      console.log("focusum");	 
+      /*animation.reverse();
       animation2.reverse();
-      animation3.reverse();
+      animation3.reverse();*/
       if($('#emailc').html() == "" || $('#emailc').html() == "email address")
         {
             $('#emailc').html(deg1);
@@ -85,9 +86,9 @@ function letterdis(length,target)
 $('#emailc').focus(function(){
       letterdis($("#emailc").find('span').length , $("#emailc"));
       $('#alertwarning').hide();
-	 animation.reverse();
+	/* animation.reverse();
       animation2.reverse();
-      animation3.reverse();
+      animation3.reverse();*/
       if($('#name').html() == "" || $('#name').html() == "name")
         {
             $('#name').html(deg);
@@ -106,9 +107,9 @@ $('#emailc').focus(function(){
 $('#message').focus(function(){
       letterdis($("#message").find('span').length , $("#message"));
        $('#alertwarning').hide();
-	 animation.reverse();
+	/* animation.reverse();
       animation2.reverse();
-      animation3.reverse();
+      animation3.reverse();*/
      if($('#name').html() == "" || $('#name').html() == "name")
         {
             $('#name').html(deg);
@@ -156,9 +157,9 @@ $( "#message" ).keyup(function() {
 
 $("#name").blur(function(){
  $('#alertwarning').hide();
-	 animation.reverse();
+	/* animation.reverse();
       animation2.reverse();
-      animation3.reverse();
+      animation3.reverse();*/
     if($('#name').html() == "")
       {
           $('#name').html(deg);
@@ -169,9 +170,9 @@ $("#name").blur(function(){
 
 $("#emailc").blur(function(){
  $('#alertwarning').hide();
-	 animation.reverse();
+	/* animation.reverse();
       animation2.reverse();
-      animation3.reverse();
+      animation3.reverse();*/
     if($('#emailc').html() == "")
       {
           $('#emailc').html(deg1);
@@ -183,9 +184,9 @@ $("#emailc").blur(function(){
 
 $("#message").blur(function(){
  $('#alertwarning').hide();
-	 animation.reverse();
+	/* animation.reverse();
       animation2.reverse();
-      animation3.reverse();
+      animation3.reverse();*/
     if($('#message').html() == "")
       {
           $('#message').html(deg2);
