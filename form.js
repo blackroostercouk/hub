@@ -35,6 +35,32 @@ var animation3 = anime({
   delay:500
 });
 
+/*Reverse*/
+var animation4 = anime({
+    targets: '#pagec',
+    scale: [1, 0],
+    duration:500,
+    easing: 'easeOutBounce',
+    autoplay:false,
+})
+
+var animation5 = anime({
+    targets: '#prens',
+    fill: ['#e24a4a', '#000'],
+    easing: 'easeOutQuint',
+    duration:500,
+    autoplay:false,
+})
+
+var animation6 = anime({
+  targets: '#warningtext2',
+  opacity:[1,0],
+  easing: 'easeOutQuint',
+  duration:500,
+  delay:500
+});
+/*Reverse*/
+
 
 function warningname(){
   var position = $("#name").position();
@@ -92,15 +118,10 @@ function warninghuman(){
 
 function animreverse()
 {
-  var position = $("#name").position();
-  var xc = position.left;
-  var yc = position.top;
-  $("#warningtarget").css("top",position.top-134);
-  $("#warningtarget").css("left",position.left+50);
-  $(".warningtextc").text("You need to fill in your name");	
-  animation2.reverse();
-  animation.reverse();
-  animation3.reverse();
+	
+  animation6.restart();
+  animation5.restart();
+  animation4.restart();
 }
 
 
