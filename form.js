@@ -39,17 +39,17 @@ var animation3 = anime({
 var animation4 = anime({
     targets: '#pagec',
     scale: [1, 0],
-    duration:500,
+    duration:100,
     easing: 'easeOutQuint',
     autoplay:false,
-    delay:500
+    delay:100
 })
 
 var animation5 = anime({
     targets: '#prens',
     fill: ['#e24a4a', '#000'],
     easing: 'easeOutQuint',
-    duration:500,
+    duration:100,
     autoplay:false,
 })
 
@@ -57,7 +57,7 @@ var animation6 = anime({
   targets: '#warningtext2',
   opacity:[1,0],
   easing: 'easeOutQuint',
-  duration:500,
+  duration:100,
   
 });
 /*Reverse*/
