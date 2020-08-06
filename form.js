@@ -11,6 +11,8 @@ function validateEmail(emailt) {
 }
 
 
+$("#warningtext2").css("opacity","0");
+
 var animation = anime({
     targets: '#pagec',
     scale: [0, 1],
