@@ -64,6 +64,8 @@ var animation6 = anime({
 });
 /*Reverse*/
 
+$(".warningtextc").text("");
+
 
 function warningname(){
   var position = $("#name").position();
