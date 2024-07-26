@@ -82,7 +82,7 @@ function warningname(){
 
 function warningemail()
 {
- var position = $("#emailc").position();
+ var position = $("#postaadresi").position();
         var xc = position.left;
         var yc = position.top;
         $("#warningtarget").css("top",position.top-134);
@@ -144,7 +144,7 @@ var deg2 = 'message';
 
 $(document).ready(function() {
 	$("#name").lettering();
-      $("#emailc").lettering();
+      $("#postaadresi").lettering();
       $("#message").lettering();
       $(".hellotext").lettering();
       $('#thankm').html('');
@@ -172,10 +172,10 @@ function letterdis(length,target)
            }
       //console.log("focusum");	 
       
-      if($('#emailc').html() == "" || $('#emailc').html() == "email address")
+      if($('#postaadresi').html() == "" || $('#postaadresi').html() == "email address")
         {
-            $('#emailc').html(deg1);
-            $("#emailc").lettering();
+            $('#postaadresi').html(deg1);
+            $("#postaadresi").lettering();
         }
        if($('#message').html() == "" || $('#message').html() == "message")
         {
@@ -194,10 +194,10 @@ function letterdis(length,target)
       formalertkontrol = 0;
       }
 
-      if($('#emailc').html() == "" || $('#emailc').html() == "email address")
+      if($('#postaadresi').html() == "" || $('#postaadresi').html() == "email address")
         {
-            $('#emailc').html(deg1);
-            $("#emailc").lettering();
+            $('#postaadresi').html(deg1);
+            $("#postaadresi").lettering();
         }
        if($('#message').html() == "" || $('#message').html() == "message")
         {
@@ -206,8 +206,8 @@ function letterdis(length,target)
         }
    });
 
-$('#emailc').focus(function(){
-      letterdis($("#emailc").find('span').length , $("#emailc"));
+$('#postaadresi').focus(function(){
+      letterdis($("#postaadresi").find('span').length , $("#postaadresi"));
       $('#alertwarning').hide();
 	 if(formalertkontrol == 1)
       {
@@ -244,10 +244,10 @@ $('#message').focus(function(){
             $('#name').html(deg);
             $("#name").lettering();
         }
-       if($('#emailc').html() == "" || $('#emailc').html() == "email address")
+       if($('#postaadresi').html() == "" || $('#postaadresi').html() == "email address")
         {
-            $('#emailc').html(deg1);
-            $("#emailc").lettering();
+            $('#postaadresi').html(deg1);
+            $("#postaadresi").lettering();
         }
    });
 
@@ -256,8 +256,8 @@ $( "#name" ).keyup(function() {
      $('#name-2').val($(this).html());
 });
 
-$( "#emailc" ).keyup(function() {
-     $('#email').val($(this).html());
+$( "#postaadresi" ).keyup(function() {
+     $('#gelenposta').val($(this).html());
 });
 
 $( "#message" ).keyup(function() {
@@ -280,17 +280,17 @@ if(formalertkontrol == 1)
   });
 
 
-$("#emailc").blur(function(){
+$("#postaadresi").blur(function(){
  $('#alertwarning').hide();
 if(formalertkontrol == 1)
       {
       animreverse();
       formalertkontrol = 0;
       }	
-    if($('#emailc').html() == "")
+    if($('#postaadresi').html() == "")
       {
-          $('#emailc').html(deg1);
-          $("#emailc").lettering();
+          $('#postaadresi').html(deg1);
+          $("#postaadresi").lettering();
       }
   });
 
@@ -339,7 +339,7 @@ anime({
   autoplay: true,
    complete: function(anim) {
     $("#youcan").css('display','none');
-    $("#emailc").css('display','none');
+    $("#postaadresi").css('display','none');
   }
 });
 
@@ -366,7 +366,7 @@ anime({
 });
 
 anime({
-  targets: '#emailc',
+  targets: '#postaadresi',
   top: '-30px',
   opacity:[1,0],
   autoplay: true,
@@ -441,7 +441,7 @@ $( window ).resize(function() {
 	}
 	if(wherewarning == "email")
 	{
-	 var position = $("#emailc").position();
+	 var position = $("#postaadresi").position();
 	}
 	if(wherewarning == "message")
 	{
@@ -471,8 +471,12 @@ Webflow.push(function() {
   // new form handling
 	
 	
-  $('#email-form').submit(function(evt) {
+  $('#gelenposta-form').submit(function(evt) {
    // evt.preventDefault();
+    let emailx = $("#email").val();
+    if(emailx != ""){
+	    return false;
+    }	  
     formname = $("#name-2").val();
     if(formname == "" || formname == "name"){
 	    if(md2.mobile() != null)
@@ -487,7 +491,7 @@ Webflow.push(function() {
         return false;
 	     }
     }
-    formemail = $("#email").val();
+    formemail = $("#gelenposta").val();
     if(formemail == "" || formemail == "email address"){
 	     if(md2.mobile() != null){
        $("#warningtext").text("You need to fill in your email address");
